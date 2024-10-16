@@ -1,0 +1,186 @@
+/*
+  *** TODO: fill in your header ***
+  INSERT YOUR NAME HERE
+  INSERT THE CURRENT DATE HERE
+
+  WRITE A 2-3 SENTENCE FILE DESCRIPTION HERE
+*/
+
+@font-face {
+  font-family: "TitleFont";
+  src: url("fonts/equilibrist-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PageFont";
+  src: url("fonts/absans-regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#page {
+  background-image: url("images/menu_bg.png");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: max(500px, 70%);
+  height: 100vh;
+  display: grid;
+  padding: 20px;
+  grid-template-rows: 8vw auto 200px; grid-gap:10px;
+  grid-template-areas:
+        "head"
+        "body"
+        "foot";
+}
+
+trailer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+screen-shots, roadmap {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-evenly;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+copy {
+  display: flex;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1, h2 {
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: lightskyblue;
+  text-align: center;
+}
+
+p {
+  line-height: 1.5em;
+}
+
+#feat-category {
+  font-weight: bold;
+  margin-bottom: 1em;
+  list-style-image: url("images/up.png");
+}
+
+#feat {
+  margin-bottom: 1em;
+  list-style-image: url("images/cross.png");
+}
+
+#page > header {
+  grid-area: head;
+  font-family: "TitleFont", serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6vw;
+  font-weight: bold;
+  color: black;
+  text-shadow: 0 0 20px white;
+}
+
+content, footer {
+  padding: 20px;
+  font-family: "PageFont", sans-serif;
+}
+
+copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  width: min(50%, 70%);
+}
+
+#road-entry {
+  background: rgba(255, 248, 220, 0.6);
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  width: 45%;
+  color: black;
+  font-weight: bold;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+}
+
+#road-null {
+  display: flex;
+  width: 40%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 30pt;
+}
+
+#road-desc {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+#upcoming {
+  display: flex;
+  flex-direction: column;
+  font-weight: normal;
+}
+
+#upcoming-item {
+  list-style-image: url("images/crys.png");
+}
+
+#page > content {
+  grid-area: body;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.screens {
+  width: 30vw;
+  text-align: center;
+}
+
+#page > footer {
+  grid-area: foot;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  font-weight: bold;
+  color: black
+}
+
+#email {
+  color: black
+}
